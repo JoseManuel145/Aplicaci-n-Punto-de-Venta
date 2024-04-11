@@ -9,6 +9,14 @@ public class Inventario {
         return productos;
     }
 
+    public Producto getProductoPorId(String id) {
+        for (Producto producto : productos) {
+            if (id.equals(producto.getId())) {
+                return producto;
+            }
+        }
+        return null;
+    }
     public void addProduct(Producto producto){
         productos.add(producto);
     }
@@ -19,25 +27,17 @@ public class Inventario {
             }
         }
     }
-    public Producto getProductoPorId(String id) {
-        for (Producto producto : productos) {
-            if (id.equals(producto.getId())) {
-                return producto;
-            }
-        }
-        return null;
-    }
-    public void reducirStock(String id) {
-        Producto producto = getProductoPorId(id);
-        if (producto != null && producto.getCantidad() > 0) {
-            producto.setCantidad(producto.getCantidad() - 1);
-        }
-    }
-
     public void aumentarStock(String id) {
         Producto producto = getProductoPorId(id);
         if (producto != null) {
             producto.setCantidad(producto.getCantidad() + 1);
+        }
+    }
+
+    public void reducirStock(String id) {
+        Producto producto = getProductoPorId(id);
+        if (producto != null && producto.getCantidad() > 0) {
+            producto.setCantidad(producto.getCantidad() - 1);
         }
     }
 }

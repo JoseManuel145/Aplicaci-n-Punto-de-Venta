@@ -11,10 +11,6 @@ import java.util.ArrayList;
         private ArrayList<Producto> productosVendidos;
         private ArrayList<Ticket> tickets = new ArrayList<>();
         private LocalDateTime fechaCreacion;
-        public void agregarTicket(Ticket ticket){
-            tickets.add(ticket);
-        }
-
         public ArrayList<Ticket> getTickets() {
             return tickets;
         }
@@ -35,6 +31,10 @@ import java.util.ArrayList;
 
         public void setProductosVendidos(ArrayList<Producto> productosVendidos) {
             this.productosVendidos = productosVendidos;
+        }
+
+        public void agregarTicket(Ticket ticket){
+            tickets.add(ticket);
         }
 
         public String imprimirTicket() {

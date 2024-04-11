@@ -12,12 +12,12 @@ public class Venta {
         this.inventario = inventario;
     }
 
-    public ArrayList<Producto> getProductosVender() {
-        return productosVender;
-    }
-
     public double getTotal() {
         return total;
+    }
+
+    public ArrayList<Producto> getProductosVender() {
+        return productosVender;
     }
 
     public void agregarProducto(String id) {

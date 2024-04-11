@@ -18,6 +18,10 @@ public class Producto {
         this.precio = precio;
     }
 
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
     public String getId() {
         return id;
     }
@@ -25,16 +29,12 @@ public class Producto {
     public String getNombre() {
         return nombre;
     }
-
     public double getPrecio() {
         return precio;
     }
+
     public int getCantidad() {
         return cantidad;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
     }
 
     public String genId(){
